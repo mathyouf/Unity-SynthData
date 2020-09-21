@@ -1,0 +1,75 @@
+# ===== #
+# Notes #
+# ===== #
+
+# Suggested .gitattributes discussion
+# https://gist.github.com/nemotoo/b8a1c3a0f1225bb9231979f389fd4f3f
+
+# Considering adding File Locking to binary files where merge conflict resolutions require overwriting one completely `locked`
+# When starting work on a file -> `git lfs lock file.png` after your merge request is approved -> `git lfs unlock file.png`
+# https://docs.gitlab.com/ee/user/project/file_lock.html
+
+
+# =========== #
+# Unity Merge #
+# =========== #
+
+*.cs diff=csharp text
+*.cginc text
+*.shader text
+
+*.mat merge=unityyamlmerge eol=lf
+*.anim merge=unityyamlmerge eol=lf
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.physicsMaterial2D merge=unityyamlmerge eol=lf
+*.physicMaterial merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf
+*.meta merge=unityyamlmerge eol=lf
+*.controller merge=unityyamlmerge eol=lf
+
+
+# ============================ #
+# Git Large File Storage (LFS) #
+# ============================ #
+
+# Image
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+
+
+# Audio
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.ogg filter=lfs diff=lfs merge=lfs -text
+
+# Video
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+
+# 3D Object
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.FBX filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.obj filter=lfs diff=lfs merge=lfs -text
+
+# Animation
+*.anim filter=lfs diff=lfs merge=lfs -text
+
+# ETC
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.a filter=lfs diff=lfs merge=lfs -text
+*.exr filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.unitypackage filter=lfs diff=lfs merge=lfs -text
+*.aif filter=lfs diff=lfs merge=lfs -text
+*.ttf filter=lfs diff=lfs merge=lfs -text
+*.rns filter=lfs diff=lfs merge=lfs -text
+*.reason filter=lfs diff=lfs merge=lfs -text
+*.lxo filter=lfs diff=lfs merge=lfs -text
